@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+}
+
+.light-theme {
+  --background: hsl(0, 0%, 90%);
+  --keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+
+  --key-background: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+  --key-selected: hsl(30, 25%, 79%);
+
+  --key-toggle: hsl(19, 63%, 50%);
+  --key-toggle-shadow: hsl(19, 70%, 34%);
+
+  --key-reset: hsl(185, 30%, 49%);
+  --key-reset-shadow: hsl(172, 28%, 35%);
+
+  --text: hsl(60, 10%, 19%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
+.dark-theme {
+  --background: hsl(222, 26%, 31%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+
+  --key-background: hsl(222, 26%, 31%);
+  --key-shadow: hsl(28, 16%, 65%);
+  --key-selected: hsl(222, 26%, 21%);
+
+  --key-toggle: hsl(6, 63%, 50%);
+  --key-toggle-shadow: hsl(6, 70%, 34%);
+
+  --key-reset: hsl(225, 21%, 49%);
+  --key-reset-shadow: hsl(224, 28%, 35%);
+
+  --text: hsl(0, 0%, 80%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
+.purple-theme {
+  --background: hsl(268, 75%, 9%);
+  --keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+
+  --key-background: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
+  --key-selected: hsl(268, 47%, 11%);
+
+  --key-toggle: hsl(176, 100%, 44%);
+  --key-toggle-shadow: hsl(177, 92%, 70%);
+
+  --key-reset: hsl(281, 89%, 26%);
+  --key-reset-shadow: hsl(285, 91%, 52%);
+
+  --text: hsl(52, 100%, 62%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text);
+}
+
+.calc-header h2 {
+  font-size: 2rem;
+}
+
+.themes-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.themes-container > div {
+  font-size: smaller;
+}
+
+.theme-switch-nums {
+  display: flex;
+  gap: 1rem;
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  width: 140%;
+  height: 25px;
+  border-radius: 9999px;
+  background-color: var(--keypad-background);
+  margin-top: 5px;
+  transform: translateX(-15%);
+}
+
+.theme-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--key-toggle);
+  cursor: pointer;
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
+.calc-display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: var(--screen-background);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 2.5rem;
+}
+
+.calc-keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 400px;
+  background-color: var(--keypad-background);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.calc-keys {
+  background-color: var(--key-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-bottom: 5px solid var(--key-shadow);
+  font-size: 1.9rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--key-selected);
+}
+
+.reset {
+  background-color: var(--key-reset);
+  border-bottom: 5px solid var(--key-reset-shadow);
+  color: var(--text-white);
+  font-size: 1rem;
+  width: 100%;
+}
+
+.equal {
+  background-color: var(--key-toggle);
+  border-bottom: 5px solid var(--key-toggle-shadow);
+  color: var(--text-white);
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.calc-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+
+.calc-footer p {
+  display: flex;
+  align-items: center;
+}
+
+.calc-footer a {
+  margin-left: 0.3rem;
+}

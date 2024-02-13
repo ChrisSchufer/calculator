@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="./script.js" defer></script>
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body class="light-theme">
+    <main class="container">
+      <div class="calc-header">
+        <h2>calc</h2>
+        <div class="themes-container">
+          <div>THEME</div>
+          <div class="theme-switch-container">
+            <div class="theme-switch-nums">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <div class="theme-switcher">
+              <button class="theme-button active" id="theme1"></button>
+              <button class="theme-button" id="theme2"></button>
+              <button class="theme-button" id="theme3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calc" id="calculator">
+        <div class="calc-display">0</div>
+        <div class="calc-keyboard">
+          <button class="calc-keys" data-type="number">7</button>
+          <button class="calc-keys" data-type="number">8</button>
+          <button class="calc-keys" data-type="number">9</button>
+          <button class="calc-keys reset" data-type="delete">DEL</button>
+          <button class="calc-keys" data-type="number">4</button>
+          <button class="calc-keys" data-type="number">5</button>
+          <button class="calc-keys" data-type="number">6</button>
+          <button class="calc-keys" data-key="plus" data-type="operator">+</button>
+          <button class="calc-keys" data-type="number">1</button>
+          <button class="calc-keys" data-type="number">2</button>
+          <button class="calc-keys" data-type="number">3</button>
+          <button class="calc-keys" data-key="minus" data-type="operator">-</button>
+          <button class="calc-keys" data-type="number">.</button>
+          <button class="calc-keys" data-type="number">0</button>
+          <button class="calc-keys" data-key="divide" data-type="operator">/</button>
+          <button class="calc-keys" data-key="times" data-type="operator">x</button>
+          <button class="calc-keys span-2 reset" data-type="deleteAll">RESET</button>
+          <button class="calc-keys span-2 equal" data-type="equal">=</button>
+        </div>
+      </div>
+      <div class="calc-footer">
+        <p>developed by <a href="/"> Chris</a></p>
+      </div>
+    </main>
+  </body>
+</html>
